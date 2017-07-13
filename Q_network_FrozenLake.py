@@ -10,15 +10,11 @@ Created on Thu Jul 13 15:58:10 2017
 
 import gym
 import numpy as np
-import random
 import tensorflow as tf
 import matplotlib.pyplot as plt
 
 #Load the environment
 env = gym.make('FrozenLake-v0')
-
-INFO:gym.envs.registration:Making new env: FrozenLake-v0
-[2016-08-25 11:47:05,546] Making new env: FrozenLake-v0
 
 # The Q-Network Approach  
 
@@ -82,8 +78,6 @@ with tf.Session() as sess:
 print "Percent of succesful episodes: " + str(sum(rList)/num_episodes) + "%"
 
 #Statistics on network performance
-
-#We can see that the network beings to consistly reach the goal around the 750 episode mark.
 plt.plot(rList)
 plt.plot(jList)
 
